@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1606190962 source:c:\users\denis\documents\poo\poo-1\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+
