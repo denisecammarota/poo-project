@@ -7,11 +7,80 @@
 using namespace std;
 
 //clases declaradas al comienzo porque despues las necesito
-class Human; //solo la declaracion
 class Country; //solo la declaracion
 class SimulationParameters; //solo la declaracion
-class HealthState{}; //completar con definicion
-class Healthy:public HealthState{}; //completar con definicion
+
+//CLASE HEALTHSTATE DE UNA PERSONA + HEREDADAS
+class HealthState{
+    public:
+        //acciones
+        void passDay(Human * h){};
+        bool getInfected(bool infectious) {return false;} //si se va a infectar o no
+        //preguntas de tipo de estado de salud
+        bool isHealthy() { return false; }
+        bool isInfected() { return false; }
+        bool isSick() { return false; }
+        bool isImmune() { return false; }
+        bool isDead() { return false; }
+        // preguntas de tipo tambien
+        bool isInfectious() { return false; }
+        bool isVisiblyInfectious() { return false; }
+};
+
+
+class Healthy:public HealthState{ //a completar
+    public:
+        bool isHealthy() { return true; }
+        bool getInfected(bool infectious,Human * h) {return false;h->Become_Infected();} //volver a escribir cuando esten las reglas y etc
+};
+
+class Infected:public HealthState{ //a completar
+    int days_infected = 0;
+    SimulationParameters sim_pars;
+    public:
+        bool isInfected() { return true; }
+        bool isInfectious()  {return true;}
+        void passDay(Human * h) {
+            days_infected++;
+            if(days_infected == sim_pars.getUntilSickDays()){
+                h->Become_Sick();
+            }
+        };
+}; //completar con definicion
+
+class Sick:public HealthState{ //a completar
+    int days_sick = 0;
+    SimulationParameters sim_pars;
+    public:
+        bool isSick(){return true;}
+        bool isInfectious(){return true;}
+        bool isVisiblyInfectious() {return true;}
+        void passDay(Human * h){
+            days_sick++;
+            //completar aca
+        }
+}; //completar con definicion
+
+class Immune:public HealthState{ //esta listo
+    int days_immune = 0;
+    SimulationParameters sim_pars;
+    public:
+        bool isImmune() { return true; }
+        bool isInfectious() {return true;}
+        void passDay(Human * h) {
+            days_immune++;
+            if(days_immune == sim_pars.getUntilHealthyDays){
+                h->Become_Healthy();
+            }
+        }
+}; //completar con definicion
+
+class Dead:public HealthState{ //creo que esta completo
+    public:
+        bool isDead(){return true;}
+        bool isInfectious(){return true;}
+        bool isVisiblyInfectious(){return true;}
+}; //completar con definicion
 
 //CLASE SIMULATOR
 class Simulator{
@@ -41,12 +110,16 @@ class SimulationParameters{
     private:
         int maxStayDays =  10;
         int minStayDays = 5;
+        int daysUntilSick = 6;
+        int daysUntilHealthy = 2;
     //metodos
     public:
         SimulationParameters(){};
         ~SimulationParameters(){};
         int getMaxStayDays(){return maxStayDays;}
         int getMinStayDays(){return minStayDays;}
+        int getUntilSickDays(){return daysUntilSick;}
+        int getUntilHealthyDays(){return daysUntilHealthy;}
 };
 
 //CLASE WORD/MUNDO
@@ -95,7 +168,7 @@ class Human{
         static int total_humans; //cantidad de personas creadas
         int id_persona; //id de la persona
         int days_until_move; //dias que faltan hasta movimiento
-        HealthState health; //estado de salud
+        HealthState * health; //estado de salud
         Country * country; //pais donde esta la persona
         SimulationParameters sim_pars;
     public:
@@ -117,6 +190,12 @@ class Human{
         void Become_Healthy(){ //asigna estado sano a una persona
 
         }
+        void Become_Infected(){
+
+        }
+        void Become_Sick(){
+
+        }
         friend ostream& operator<<(ostream& os, const Human& h);
 
 };
@@ -129,6 +208,8 @@ ostream& operator<<(ostream& os, const Human& h)
 
 
 int Human::total_humans = 0;
+
+
 
 
 //MAIN DEL PROGRAMA POR AHORA
