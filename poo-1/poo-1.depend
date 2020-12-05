@@ -6,3 +6,18 @@
 	<vector>
 	<string>
 
+1607187398 source:c:\users\denis\documents\poo\poo-1\simulatorrules.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+
+1607186753 c:\users\denis\documents\poo\poo-1\simulatorrules.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+
