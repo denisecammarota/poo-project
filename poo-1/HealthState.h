@@ -15,7 +15,6 @@ class HealthState{
     public:
         //acciones
         void passDay(Human * h);
-        bool getInfected(bool infectious); //si se va a infectar o no
         //preguntas de tipo de estado de salud
         bool isHealthy();
         bool isInfected();

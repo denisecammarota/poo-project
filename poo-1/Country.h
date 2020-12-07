@@ -38,6 +38,20 @@ class Country{
         void addNeighbour(Country * c);
         //metodos llamados de humans
         void moveHuman(Human * h);
+        bool hasVisiblyInfectious();
+        bool hasInfectious();
+        vector <Country *> get_countryneighbours();
+        vector <Human *> get_countryresidents();
+        //metodos de get y update los health statistics de salud
+        void UpdateHealthStats();
+        int get_healthypeople();
+        int get_infectedpeople();
+        int get_sickpeople();
+        int get_immunepeople();
+        int get_deadpeople();
+        int get_infectiouspeople();
+        int get_visiblyinfectiouspeople();
+        HealthStats get_countrystats();
 };
 
 

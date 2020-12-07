@@ -45,6 +45,11 @@ class Human{
         bool isVisiblyInfectious();
         //imprimir (despues si tengo tiempo hago el overloading, por ahora no)
         void print();
+        //moving y etc
+        Country * selectDestination();
+        void moving(Country * dest_country);
+        //pass day que creo que es el ultimo metodo que me quedaba
+        void passDay();
 };
 
 

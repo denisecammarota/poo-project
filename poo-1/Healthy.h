@@ -13,7 +13,6 @@
 class Healthy: public HealthState{ //a completar
     public:
         bool isHealthy();
-        void getInfected(Human * h);
 };
 
 

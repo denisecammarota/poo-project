@@ -77,14 +77,58 @@
             bool v = health->isInfectious();
             return v;
         }
-        bool Human::isVisiblyInfectious(){
-            bool v = health->isVisiblyInfectious();
-            return v;
-        }
-        void Human::print(){
-            cout << "Humano con id: " << id_persona << "\nPais: " << country->get_name() << endl;
-        }
 
+bool Human::isVisiblyInfectious(){
+    bool v = health->isVisiblyInfectious();
+    return v;
+}
+
+void Human::print(){
+    cout << "Humano con id: " << id_persona << "\nPais: " << country->get_name() << endl;
+}
+
+Country * Human::selectDestination(){
+    vector<Country*> moving_candidates; //en ppio todos los candidatos
+    vector<Country*> filtered_candidates; //los candidatos filtrados
+    moving_candidates = country->get_countryneighbours();
+    int n_candidates = moving_candidates.size();
+    //filtro primero los candidatos posibles
+    for(int i=0;i<n_candidates;i++){
+        if(moving_candidates[i]->hasVisiblyInfectious()){
+            filtered_candidates.push_back(moving_candidates[i]);
+        }
+    }
+    //ahora elijo un pais para moverme
+    n_candidates = filtered_candidates.size(); //actualizo por los filtrados ahora
+    Country * dest_country = nullptr; //en ppio es nullptr
+    if(n_candidates != 0){
+        int idx = rand()%(n_candidates);
+        dest_country = filtered_candidates[idx];
+    }
+    return dest_country;
+}
+
+void Human::moving(Country * dest_country){
+    dest_country->moveHuman(this);
+    country = dest_country; //destination country
+    if(country->hasVisiblyInfectious() && sim_pars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse)
+        Become_Infected(); //creo que asi sin el this-> funcionara bien, SINO REVISAR Y CAMBIAR
+    }
+};
+
+void Human::passDay(){
+    health->passDay(this);
+    if(isDead()!=true){
+        days_until_move--;
+    }
+    if(days_until_move == 0){
+        Gen_MoveDays();
+        Country * dest_country = selectDestination();
+        if(dest_country != nullptr){
+            moving(dest_country);
+        }
+    }
+}
 
 
 int Human::total_humans = 0;

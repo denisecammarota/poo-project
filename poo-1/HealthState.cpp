@@ -9,7 +9,6 @@
 
 //acciones
 void HealthState::passDay(Human * h){};
-bool HealthState::getInfected(bool infectious) {return false;} //si se va a infectar o no
 //preguntas de tipo de estado de salud
 bool HealthState::isHealthy() { return false; }
 bool HealthState::isInfected() { return false; }

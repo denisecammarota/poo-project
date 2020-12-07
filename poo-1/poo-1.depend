@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1607358224 source:c:\users\denis\documents\poo\poo-1\main.cpp
+1607374319 source:c:\users\denis\documents\poo\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -27,7 +27,7 @@
 	<vector>
 	<string>
 
-1607361550 source:c:\users\denis\documents\poo\poo-1\country.cpp
+1607367454 source:c:\users\denis\documents\poo\poo-1\country.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -38,7 +38,7 @@
 	"Country.h"
 	<algorithm>
 
-1607357803 c:\users\denis\documents\poo\poo-1\human.h
+1607374381 c:\users\denis\documents\poo\poo-1\human.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -48,7 +48,7 @@
 	"HealthState.h"
 	"Healthy.h"
 
-1607361895 c:\users\denis\documents\poo\poo-1\country.h
+1607367407 c:\users\denis\documents\poo\poo-1\country.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -58,7 +58,7 @@
 	"HealthStats.h"
 	<algorithm>
 
-1607188811 c:\users\denis\documents\poo\poo-1\healthstate.h
+1607373903 c:\users\denis\documents\poo\poo-1\healthstate.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -67,7 +67,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607358038 source:c:\users\denis\documents\poo\poo-1\human.cpp
+1607374819 source:c:\users\denis\documents\poo\poo-1\human.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -94,7 +94,7 @@
 	"SimulatorRules.h"
 	"Simulator.h"
 
-1607350617 source:c:\users\denis\documents\poo\poo-1\simulator.cpp
+1607367694 source:c:\users\denis\documents\poo\poo-1\simulator.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -114,7 +114,7 @@
 	"Simulator.h"
 	"Word.h"
 
-1607352102 source:c:\users\denis\documents\poo\poo-1\healthstate.cpp
+1607373903 source:c:\users\denis\documents\poo\poo-1\healthstate.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -124,7 +124,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607352102 source:c:\users\denis\documents\poo\poo-1\healthy.cpp
+1607373903 source:c:\users\denis\documents\poo\poo-1\healthy.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -135,7 +135,7 @@
 	"Human.h"
 	"SimulatorRules.h"
 
-1607352102 c:\users\denis\documents\poo\poo-1\healthy.h
+1607373903 c:\users\denis\documents\poo\poo-1\healthy.h
 	<iostream>
 	<cstdlib>
 	<ctime>

@@ -50,7 +50,15 @@ void Simulator::populate(int peop,double pcinf){
 
 
 Simulator::~Simulator(){}; //completar
-void Simulator::passDay(){days_passed++;};
+
+void Simulator::passDay(){
+    days_passed++;
+    int n = list_countries.size();
+    for(int i=0;i<n;i++){
+        list_countries[i]->UpdateHealthStats();
+    }
+};
+
 int Simulator::getDaysPassed(){return days_passed + 1;}
 
 
