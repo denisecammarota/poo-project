@@ -9,9 +9,10 @@
 #include <string>
 #include "Country.h"
 #include "HealthState.h"
-
+#include "Healthy.h"
 
 class Country;
+class HealthState;
 //CLASE HUMANOS
 class Human{
     private:
@@ -27,10 +28,23 @@ class Human{
         ~Human();
         int get_id();
         void Gen_MoveDays();
+        //
         void Become_Healthy();
         void Become_Infected();
         void Become_Sick();
-
+        void Become_Dead();
+        void Become_Immune();
+        //
+        bool isHealthy();
+        bool isInfected();
+        bool isSick();
+        bool isImmune();
+        bool isDead();
+        //
+        bool isInfectious();
+        bool isVisiblyInfectious();
+        //imprimir (despues si tengo tiempo hago el overloading, por ahora no)
+        void print();
 };
 
 

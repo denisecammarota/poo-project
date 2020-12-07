@@ -1,10 +1,16 @@
 # depslib dependency file v1.0
-1606190962 source:c:\users\denis\documents\poo\poo-1\main.cpp
+1607358224 source:c:\users\denis\documents\poo\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	<vector>
 	<string>
+	"SimulatorRules.h"
+	"Country.h"
+	"Human.h"
+	"Simulator.h"
+	"Word.h"
+	"HealthState.h"
 
 1607187398 source:c:\users\denis\documents\poo\poo-1\simulatorrules.cpp
 	<iostream>
@@ -21,15 +27,213 @@
 	<vector>
 	<string>
 
-1607187398 source:c:\users\denis\documents\poo-project\poo-1\simulatorrules.cpp
+1607361550 source:c:\users\denis\documents\poo\poo-1\country.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Human.h"
+	"HealthStats.h"
+	"Country.h"
+	<algorithm>
+
+1607357803 c:\users\denis\documents\poo\poo-1\human.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+	"HealthState.h"
+	"Healthy.h"
+
+1607361895 c:\users\denis\documents\poo\poo-1\country.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Human.h"
+	"HealthStats.h"
+	<algorithm>
+
+1607188811 c:\users\denis\documents\poo\poo-1\healthstate.h
 	<iostream>
 	<cstdlib>
 	<ctime>
 	<vector>
 	<string>
 	"SimulatorRules.h"
+	"Human.h"
 
-1607186753 c:\users\denis\documents\poo-project\poo-1\simulatorrules.h
+1607358038 source:c:\users\denis\documents\poo\poo-1\human.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+	"HealthState.h"
+	"Healthy.h"
+	"Infected.h"
+	"Sick.h"
+	"Immune.h"
+	"Dead.h"
+
+1607198955 c:\users\denis\documents\poo\poo-1\simulator.h
+	<algorithm>
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+
+1607184590 c:\users\denis\documents\poo\poo-1\word.h
+	"SimulatorRules.h"
+	"Simulator.h"
+
+1607350617 source:c:\users\denis\documents\poo\poo-1\simulator.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Simulator.h"
+	"Country.h"
+	<algorithm>
+
+1607184693 source:c:\users\denis\documents\poo\poo-1\word.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Simulator.h"
+	"Word.h"
+
+1607352102 source:c:\users\denis\documents\poo\poo-1\healthstate.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607352102 source:c:\users\denis\documents\poo\poo-1\healthy.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Healthy.h"
+	"SimulatorRules.h"
+	"Human.h"
+	"SimulatorRules.h"
+
+1607352102 c:\users\denis\documents\poo\poo-1\healthy.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607352482 source:c:\users\denis\documents\poo\poo-1\infected.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Infected.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607352111 c:\users\denis\documents\poo\poo-1\infected.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607354752 source:c:\users\denis\documents\poo\poo-1\sick.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Sick.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607354653 c:\users\denis\documents\poo\poo-1\sick.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607355025 source:c:\users\denis\documents\poo\poo-1\immune.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Immune.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607354957 c:\users\denis\documents\poo\poo-1\immune.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607355205 source:c:\users\denis\documents\poo\poo-1\dead.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Dead.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607355129 c:\users\denis\documents\poo\poo-1\dead.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607361345 source:c:\users\denis\documents\poo\poo-1\healthstats.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"HealthStats.h"
+
+1607360551 c:\users\denis\documents\poo\poo-1\healthstats.h
 	<iostream>
 	<cstdlib>
 	<ctime>

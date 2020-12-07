@@ -32,7 +32,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Country.cpp" />
+		<Unit filename="Country.h" />
+		<Unit filename="Dead.cpp" />
+		<Unit filename="Dead.h" />
+		<Unit filename="HealthState.cpp" />
+		<Unit filename="HealthState.h" />
+		<Unit filename="HealthStats.cpp" />
+		<Unit filename="HealthStats.h" />
+		<Unit filename="Healthy.cpp" />
+		<Unit filename="Healthy.h" />
+		<Unit filename="Human.cpp" />
+		<Unit filename="Human.h" />
+		<Unit filename="Immune.cpp" />
+		<Unit filename="Immune.h" />
+		<Unit filename="Infected.cpp" />
+		<Unit filename="Infected.h" />
+		<Unit filename="Sick.cpp" />
+		<Unit filename="Sick.h" />
+		<Unit filename="Simulator.cpp" />
+		<Unit filename="Simulator.h" />
 		<Unit filename="SimulatorRules.cpp" />
+		<Unit filename="SimulatorRules.h" />
+		<Unit filename="Word.cpp" />
+		<Unit filename="Word.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

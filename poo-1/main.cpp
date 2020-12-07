@@ -18,4 +18,9 @@ using namespace std;
 int main()
 {
     srand((unsigned) time(0));
+    Country * c = new Country("Argentina");
+    Human * h = new Human(c);
+    c->addHuman(h);
+    c->removeHuman(h);
+    cout << "hasta aca funciona" << endl;
 }

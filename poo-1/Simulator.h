@@ -1,7 +1,7 @@
 #ifndef SIMULATOR_H_INCLUDED
 #define SIMULATOR_H_INCLUDED
 
-
+#include <algorithm>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -23,6 +23,11 @@ class Simulator{
         ~Simulator(); //completar
         void passDay();
         int getDaysPassed();
+        //aniadir vecinos para un pais
+        void westNeighbourAdd(Country *  c, int index);
+        void eastNeighbourAdd(Country * c, int index);
+        void northNeighbourAdd(Country * c, int index);
+        void southNeighbourAdd(Country * c, int index);
 };
 
 
