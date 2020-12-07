@@ -1,9 +1,11 @@
+----------------------------------------------------------------------------------------------
 class Healthy:public HealthState{ //a completar
     public:
         bool isHealthy() { return true; }
         bool getInfected(bool infectious,Human * h) {return false;h->Become_Infected();} //volver a escribir cuando esten las reglas y etc
 };
 
+----------------------------------------------------------------------------------------------
 
 class Infected:public HealthState{ //a completar
     int days_infected = 0;
@@ -19,6 +21,9 @@ class Infected:public HealthState{ //a completar
         };
 }; //completar con definicion
 
+
+---------------------------------------------------------------------------------------------
+
 class Sick:public HealthState{ //a completar
     int days_sick = 0;
     SimulationParameters sim_pars;
@@ -31,6 +36,9 @@ class Sick:public HealthState{ //a completar
             //completar aca
         }
 }; //completar con definicion
+
+
+---------------------------------------------------------------------------------------------
 
 class Immune:public HealthState{ //esta listo
     int days_immune = 0;
@@ -46,6 +54,10 @@ class Immune:public HealthState{ //esta listo
         }
 }; //completar con definicion
 
+
+----------------------------------------------------------------------------------------------
+
+
 class Dead:public HealthState{ //creo que esta completo
     public:
         bool isDead(){return true;}
@@ -53,5 +65,5 @@ class Dead:public HealthState{ //creo que esta completo
         bool isVisiblyInfectious(){return true;}
 }; //completar con definicion
 
-
+----------------------------------------------------------------------------------------------
 
