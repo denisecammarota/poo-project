@@ -240,3 +240,245 @@
 	<vector>
 	<string>
 
+1607624889 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Human.h"
+	"HealthStats.h"
+	"Country.h"
+	<algorithm>
+
+1607623874 c:\users\denis\documents\poo-project\poo-1\human.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+	"HealthState.h"
+	"Healthy.h"
+
+1607624853 c:\users\denis\documents\poo-project\poo-1\country.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Human.h"
+	"HealthStats.h"
+	<algorithm>
+
+1607360551 c:\users\denis\documents\poo-project\poo-1\healthstats.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+
+1607618502 c:\users\denis\documents\poo-project\poo-1\healthstate.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+
+1607186753 c:\users\denis\documents\poo-project\poo-1\simulatorrules.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+
+1607618298 c:\users\denis\documents\poo-project\poo-1\healthy.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607355205 source:c:\users\denis\documents\poo-project\poo-1\dead.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Dead.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607618502 c:\users\denis\documents\poo-project\poo-1\dead.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607618502 source:c:\users\denis\documents\poo-project\poo-1\healthstate.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607625968 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"HealthStats.h"
+
+1607618410 source:c:\users\denis\documents\poo-project\poo-1\healthy.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Healthy.h"
+	"SimulatorRules.h"
+	"Human.h"
+	"SimulatorRules.h"
+
+1607623905 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+	"HealthState.h"
+	"Healthy.h"
+	"Infected.h"
+	"Sick.h"
+	"Immune.h"
+	"Dead.h"
+
+1607618828 c:\users\denis\documents\poo-project\poo-1\infected.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607618783 c:\users\denis\documents\poo-project\poo-1\sick.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607618834 c:\users\denis\documents\poo-project\poo-1\immune.h
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Human.h"
+	"HealthState.h"
+
+1607355025 source:c:\users\denis\documents\poo-project\poo-1\immune.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Immune.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607352482 source:c:\users\denis\documents\poo-project\poo-1\infected.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Infected.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607626988 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Country.h"
+	"Human.h"
+	"Simulator.h"
+	"Word.h"
+	"HealthState.h"
+
+1607625564 c:\users\denis\documents\poo-project\poo-1\simulator.h
+	<algorithm>
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Country.h"
+
+1607625668 c:\users\denis\documents\poo-project\poo-1\word.h
+	"SimulatorRules.h"
+	"Simulator.h"
+
+1607354752 source:c:\users\denis\documents\poo-project\poo-1\sick.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Sick.h"
+	"SimulatorRules.h"
+	"Human.h"
+
+1607626974 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"Simulator.h"
+	"Country.h"
+	<algorithm>
+	<cmath>
+
+1607187398 source:c:\users\denis\documents\poo-project\poo-1\simulatorrules.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+
+1607625693 source:c:\users\denis\documents\poo-project\poo-1\word.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<vector>
+	<string>
+	"SimulatorRules.h"
+	"Simulator.h"
+	"Word.h"
+

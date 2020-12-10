@@ -28,6 +28,7 @@ class Simulator{
         void eastNeighbourAdd(Country * c, int index);
         void northNeighbourAdd(Country * c, int index);
         void southNeighbourAdd(Country * c, int index);
+        void print_simulator();
 };
 
 

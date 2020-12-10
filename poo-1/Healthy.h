@@ -12,7 +12,7 @@
 
 class Healthy: public HealthState{ //a completar
     public:
-        bool isHealthy();
+        bool isHealthy() override;
 };
 
 

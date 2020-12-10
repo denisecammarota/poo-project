@@ -8,5 +8,5 @@
 #include "Human.h"
 #include "SimulatorRules.h"
 
-bool Healthy::isHealthy() { return true; }
+bool Healthy::isHealthy(){ return true; }
 

@@ -6,6 +6,7 @@
 #include "Simulator.h"
 #include "Country.h"
 #include <algorithm>
+#include <cmath> //para la funcion round
 
 
 Simulator::Simulator(int r,int c){
@@ -40,23 +41,37 @@ void Simulator::populate(int peop,double pcinf){
     }
     //generar estados de salud
     //a priori los creo sanos a los humanos, ahora los enfermo a los que corresponde
-    int infectados = (int) pcinf * peop; //pcinf esta entre 0 y 1, no en porcentaje en este caso
+    double infectados =  round(pcinf * peop); //pcinf esta entre 0 y 1, no en porcentaje en este caso
     for(int i=0;i<infectados;i++){
         int idx = rand() % humans.size();
+        while(humans[idx]->isInfected()){ //si ya infecte a uno random antes y vuelve a salir, infecto a otro tipo
+            idx = rand() % humans.size();
+        }
         humans[idx]->Become_Infected();
     }
-
+    //inicializar los healthstats para cada pais el primer dia
+    int npaises = list_countries.size();
+    for(int i=0;i<npaises;i++){
+        list_countries[i]->UpdateHealthStats();
+    }
 };
 
 
 Simulator::~Simulator(){}; //completar
 
-void Simulator::passDay(){
-    days_passed++;
-    int n = list_countries.size();
-    for(int i=0;i<n;i++){
+void Simulator::passDay(){ //hasta aca esta todo bien verdaderamente, vamos a chequear paso por paso por que no hay movimiento
+    int npaises = list_countries.size();
+    for(int i=0;i<npaises;i++){
+        list_countries[i]->runHealthActions();
+    }
+    for(int i=0;i<npaises;i++){
+        list_countries[i]->processMoves();
+    }
+    //actualizo los healthstats de cada pais
+    for(int i=0;i<npaises;i++){
         list_countries[i]->UpdateHealthStats();
     }
+   days_passed++; //sumo un dia al contador
 };
 
 int Simulator::getDaysPassed(){return days_passed + 1;}
@@ -105,3 +120,12 @@ void Simulator::southNeighbourAdd(Country * c, int index){
     }
     c->addNeighbour(list_countries[neighbour]);
 };
+
+void Simulator::print_simulator(){
+    int npaises = list_countries.size();
+    cout << "Dia " << days_passed << endl;
+    for(int i=0;i<npaises;i++){
+        cout << list_countries[i]->get_name() << ": ";
+        list_countries[i]->get_countrystats().print();
+    }
+}

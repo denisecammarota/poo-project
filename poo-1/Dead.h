@@ -13,9 +13,9 @@
 
 class Dead: public HealthState{
     public:
-        bool isDead();
-        bool isInfectious();
-        bool isVisiblyInfectious();
+        bool isDead() override;
+        bool isInfectious() override;
+        bool isVisiblyInfectious() override;
 };
 
 

@@ -22,3 +22,7 @@ void Word::passDay(){
     simulator->passDay();
 }
 
+void Word::print_word(){
+    simulator->print_simulator();
+}
+

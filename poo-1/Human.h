@@ -50,6 +50,8 @@ class Human{
         void moving(Country * dest_country);
         //pass day que creo que es el ultimo metodo que me quedaba
         void passDay();
+        //get country
+        Country * get_country();
 };
 
 

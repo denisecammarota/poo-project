@@ -16,14 +16,14 @@ class HealthState{
         //acciones
         void passDay(Human * h);
         //preguntas de tipo de estado de salud
-        bool isHealthy();
-        bool isInfected();
-        bool isSick();
-        bool isImmune();
-        bool isDead();
+        virtual bool isHealthy();
+        virtual bool isInfected();
+        virtual bool isSick();
+        virtual bool isImmune();
+        virtual bool isDead();
         // preguntas de tipo tambien
-        bool isInfectious();
-        bool isVisiblyInfectious();
+        virtual bool isInfectious();
+        virtual bool isVisiblyInfectious();
 };
 
 #endif // HEALTHSTATE_H_INCLUDED

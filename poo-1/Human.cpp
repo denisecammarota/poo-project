@@ -17,6 +17,7 @@
             country = c; //asignar pais
             c->addHuman(this); //aniadir persona a pais, completar
             health = new Healthy;
+            Become_Healthy();
             Gen_MoveDays(); //asigna dias hasta el proximo movimiento, completar
             total_humans++; //fin de creacion +1 persona
         }
@@ -130,5 +131,8 @@ void Human::passDay(){
     }
 }
 
+Country * Human::get_country(){
+    return country;
+}
 
 int Human::total_humans = 0;

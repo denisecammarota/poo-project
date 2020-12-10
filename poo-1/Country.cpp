@@ -63,7 +63,7 @@ int Country::get_healthypeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isHealthy()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -74,7 +74,7 @@ int Country::get_infectedpeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isInfected()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -86,7 +86,7 @@ int Country::get_deadpeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isDead()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -97,7 +97,7 @@ int Country::get_sickpeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isSick()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -109,7 +109,7 @@ int Country::get_immunepeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isImmune()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -120,7 +120,7 @@ int Country::get_infectiouspeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isInfectious()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -132,7 +132,7 @@ int Country::get_visiblyinfectiouspeople(){
     int res = 0;
     for(int i=0;i<n;i++){
         if(country_people[i]->isVisiblyInfectious()){
-                res++;
+                res = res+1;
         }
     }
     return res;
@@ -140,6 +140,38 @@ int Country::get_visiblyinfectiouspeople(){
 
 HealthStats Country::get_countrystats(){
     return country_stats;
+}
+
+//basicamente pasamos un dia para las personas del pais, despues eliminamos a las que se fueron
+void Country::runHealthActions(){
+    int npeople = country_people.size();
+    //pasa un dia para las personas, algunas se mueven, otras se quedan en el pais donde estan
+    for(int i = 0;i<npeople;i++){
+        country_people[i]->passDay();
+    }
+    //removemos a las que se fueron del pais
+    vector <Human *> people_toremove;
+    //busco primero a los que voy a borrar
+    for(int i=0;i<npeople;i++){
+        if(country_people[i]->get_country() != this){
+            people_toremove.push_back(country_people[i]);
+        }
+    }
+    //ahora si los borro
+    int nremovedpeople = people_toremove.size();
+    for(int i=0;i<nremovedpeople;i++){
+        removeHuman(people_toremove[i]);
+    }
+
+}
+
+//aca aniadimos a las personas que llegaron al pais
+void Country::processMoves(){
+    int narrivedpeople = country_arrivals.size();
+    for(int i=0;i<narrivedpeople;i++){
+        addHuman(country_arrivals[i]);
+    }
+    country_arrivals.clear();
 }
 
 int Country::total_countries= 0;

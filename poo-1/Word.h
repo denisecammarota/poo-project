@@ -13,6 +13,7 @@ class Word{
         Word(int rows,int columns,int people,double perCent_infected);
         ~Word();
         void passDay();
+        void print_word();
 };
 
 #endif // WORD_H_INCLUDED

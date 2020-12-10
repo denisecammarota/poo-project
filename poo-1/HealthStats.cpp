@@ -55,6 +55,5 @@ void HealthStats::add(HealthStats other){
 };
 //
 void HealthStats::print(){
-    cout << "HealthStats" << endl;
     cout << "healthy: " << healthy << " immune:" << immune << " dead: " << dead << " infected: " << infected << " sick: " << sick << endl;
 };

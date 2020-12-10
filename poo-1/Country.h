@@ -52,6 +52,9 @@ class Country{
         int get_infectiouspeople();
         int get_visiblyinfectiouspeople();
         HealthStats get_countrystats();
+        //metodos de procesar movimientos y pasar dia para los humanos, llamados de passday en simulator que tiene paises
+        void runHealthActions();
+        void processMoves();
 };
 
 

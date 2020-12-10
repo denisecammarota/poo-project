@@ -13,9 +13,9 @@
 class Sick:public HealthState{ //a completar
     int days_sick = 0;
     public:
-        bool isSick();
-        bool isInfectious();
-        bool isVisiblyInfectious();
+        bool isSick() override;
+        bool isInfectious() override;
+        bool isVisiblyInfectious() override;
         void passDay(Human * h);
 };
 
