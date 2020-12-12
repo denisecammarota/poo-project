@@ -26,3 +26,5 @@ bool SimulationParameters::dieDiceThrow(){
     double number = ((double) rand() / (RAND_MAX));
     return number <= probToDie;
 }
+
+SimulationParameters g_simpars;

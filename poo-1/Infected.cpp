@@ -11,9 +11,8 @@
 bool Infected::isInfected() { return true; }
 bool Infected::isInfectious()  {return true;}
 void Infected::passDay(Human * h) {
-    SimulationParameters sim_pars;
     days_infected++;
-    if(days_infected == sim_pars.getUntilSickDays()){
+    if(days_infected == g_simpars.getUntilSickDays()){
         h->Become_Sick();
     }
 };

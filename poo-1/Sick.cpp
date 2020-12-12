@@ -12,14 +12,13 @@ bool Sick::isSick(){return true;}
 bool Sick::isInfectious(){return true;}
 bool Sick::isVisiblyInfectious() {return true;}
 void Sick::passDay(Human * h){
-    SimulationParameters sim_pars;
     days_sick++;
-    if(days_sick == sim_pars.getUntilDeadChanceDays()){
-        if(sim_pars.dieDiceThrow()){
+    if(days_sick == g_simpars.getUntilDeadChanceDays()){
+        if(g_simpars.dieDiceThrow()){
             h->Become_Dead();
         }
     }
-    if(days_sick == sim_pars.getUntilImmuneDays()){
+    if(days_sick == g_simpars.getUntilImmuneDays()){
         h->Become_Immune();
     }
     //completar aca

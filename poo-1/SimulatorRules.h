@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//CLASE SIMULATOR PARAMETERS
+//NAMESPACE SIMULATOR PARAMETERS
 class SimulationParameters{
     //atributos
     private:
@@ -24,7 +24,6 @@ class SimulationParameters{
         double probToTransmitVirus = 0.4;
         double probToDie = 0.25;
         double probToTravel = 0.4;
-
     //metodos
     public:
         SimulationParameters();
@@ -39,5 +38,7 @@ class SimulationParameters{
         bool travelDiceThrow();
         bool dieDiceThrow();
 };
+
+extern SimulationParameters g_simpars;
 
 #endif // SIMULATORRULES_H_INCLUDED

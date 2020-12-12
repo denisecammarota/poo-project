@@ -22,7 +22,6 @@ class Human{
         int days_until_move; //dias que faltan hasta movimiento
         HealthState * health; //estado de salud
         Country * country; //pais donde esta la persona
-        SimulationParameters sim_pars;
     public:
         Human(Country * c);
         ~Human();

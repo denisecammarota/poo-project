@@ -27,8 +27,8 @@
         int Human::get_id(){return id_persona;} //devuelve id de persona
 
         void Human::Gen_MoveDays(){ //genera cantidad de dias hasta moverse
-            int maximum = sim_pars.getMaxStayDays();
-            int minimum = sim_pars.getMinStayDays();
+            int maximum = g_simpars.getMaxStayDays();
+            int minimum = g_simpars.getMinStayDays();
             days_until_move = (rand()%(maximum-minimum+1))+minimum;
         }
 
@@ -93,7 +93,6 @@ Country * Human::selectDestination(){
     vector<Country*> filtered_candidates; //los candidatos filtrados
     moving_candidates = country->get_countryneighbours();
     int n_candidates = moving_candidates.size();
-    cout << "num candidatos: " << n_candidates << endl;
     //filtro primero los candidatos posibles
     for(int i=0;i<n_candidates;i++){
         if(moving_candidates[i]->hasVisiblyInfectious()){
@@ -102,7 +101,6 @@ Country * Human::selectDestination(){
     }
     //ahora elijo un pais para moverme
     n_candidates = filtered_candidates.size(); //actualizo por los filtrados ahora
-    cout << "filtered candidated: " << n_candidates << endl;
     Country * dest_country = nullptr; //en ppio es nullptr
     if(n_candidates != 0){
         int idx = rand()%(n_candidates);
@@ -114,7 +112,7 @@ Country * Human::selectDestination(){
 void Human::moving(Country * dest_country){
     dest_country->moveHuman(this);
     country = dest_country; //destination country
-    if(country->hasVisiblyInfectious() && sim_pars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse)
+    if(country->hasVisiblyInfectious() && g_simpars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse)
         Become_Infected(); //creo que asi sin el this-> funcionara bien, SINO REVISAR Y CAMBIAR
     }
 };

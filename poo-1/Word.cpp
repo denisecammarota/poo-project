@@ -10,7 +10,6 @@
 
 //CLASE WORD/MUNDO
 Word::Word(int rows,int columns,int people,double perCent_infected){
-    sim_pars = SimulationParameters();
     simulator = new Simulator(rows,columns);
     simulator->populate(people,perCent_infected);
 }
@@ -22,7 +21,10 @@ void Word::passDay(){
     simulator->passDay();
 }
 
-void Word::print_word(){
-    simulator->print_simulator();
+void Word::print_word_bycountries(){
+    simulator->print_simulator_bycountries();
 }
 
+void Word::print_word_all(){
+    simulator->print_simulator_all();
+}

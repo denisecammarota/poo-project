@@ -121,11 +121,30 @@ void Simulator::southNeighbourAdd(Country * c, int index){
     c->addNeighbour(list_countries[neighbour]);
 };
 
-void Simulator::print_simulator(){
+void Simulator::print_simulator_bycountries(){
     int npaises = list_countries.size();
-    cout << "Dia " << days_passed << endl;
+    cout << "Day " << days_passed << endl;
     for(int i=0;i<npaises;i++){
         cout << list_countries[i]->get_name() << ": ";
         list_countries[i]->get_countrystats().print();
     }
 }
+
+void Simulator::print_simulator_all(){
+    int npaises = list_countries.size();
+    int h = 0;
+    int in = 0;
+    int s = 0;
+    int d = 0;
+    int im = 0;
+    cout << "Word (sum): ";
+    for(int i=0;i<npaises;i++){
+        h += list_countries[i]->get_countrystats().get_healthyCount();
+        in += list_countries[i]->get_countrystats().get_infectedCount();
+        d += list_countries[i]->get_countrystats().get_deadCount();
+        s += list_countries[i]->get_countrystats().get_sickCount();
+        im += list_countries[i]->get_countrystats().get_immuneCount();
+    }
+    cout << "healthy: " << h << " immune:" << im << " dead: " << d << " infected: " << in << " sick: " << s << endl;
+}
+

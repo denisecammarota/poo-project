@@ -12,8 +12,7 @@ bool Immune::isImmune() { return true; }
 bool Immune::isInfectious() {return true;}
 void Immune::passDay(Human * h) {
     days_immune++;
-    SimulationParameters sim_pars;
-    if(days_immune == sim_pars.getUntilHealthyDays()){
+    if(days_immune == g_simpars.getUntilHealthyDays()){
         h->Become_Healthy();
         }
 }
