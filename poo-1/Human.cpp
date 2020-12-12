@@ -22,7 +22,10 @@
             total_humans++; //fin de creacion +1 persona
         }
 
-        Human::~Human(){}; // completar posiblemente
+        Human::~Human(){
+            delete health;
+            health = nullptr;
+        };
 
         int Human::get_id(){return id_persona;} //devuelve id de persona
 

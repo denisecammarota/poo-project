@@ -9,8 +9,9 @@
 #include "SimulatorRules.h"
 #include "Human.h"
 
-class Human;
+class Human; //forward declaration de la clase Human
 
+//clase HealthState que representa estado de salud
 class HealthState{
     public:
         //acciones

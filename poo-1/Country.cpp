@@ -19,7 +19,20 @@ Country::Country(string s){
 };
 
 
-Country::~Country(){}
+Country::~Country(){
+    int n = country_people.size();
+    for(int i=0;i<n;i++){
+        delete country_people[i];
+        country_people[i] = nullptr;
+    }
+    n = country_arrivals.size();
+    for(int i=0;i<n;i++){
+        delete country_arrivals[i];
+        country_arrivals[i] = nullptr;
+    }
+}
+
+
 int Country::get_id(){return id_country;}
 string Country::get_name(){return country_name;}
 

@@ -7,14 +7,15 @@
 //CLASE WORD/MUNDO
 class Word{
     private:
-        Simulator * simulator;
-        SimulationParameters sim_pars;
+        //atributo
+        Simulator * simulator; //objeto tipo simulator
     public:
-        Word(int rows,int columns,int people,double perCent_infected);
-        ~Word();
-        void passDay();
-        void print_word_bycountries();
-        void print_word_all();
+        //metodo
+        Word(int rows,int columns,int people,double perCent_infected); //constructor
+        ~Word(); //destructor
+        void passDay(); //pasar dia en el mundo
+        void print_word_bycountries(); //imprime el estado de salud de cada pais en un dia determinado
+        void print_word_all(); //imprime el estado de salud del mundo (suma de todos los paises)
 };
 
 #endif // WORD_H_INCLUDED

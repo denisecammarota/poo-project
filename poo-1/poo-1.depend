@@ -240,7 +240,7 @@
 	<vector>
 	<string>
 
-1607779312 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
+1607790995 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -287,7 +287,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607785362 c:\users\denis\documents\poo-project\poo-1\simulatorrules.h
+1607797227 c:\users\denis\documents\poo-project\poo-1\simulatorrules.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -353,7 +353,7 @@
 	"Human.h"
 	"SimulatorRules.h"
 
-1607780061 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
+1607791622 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -417,7 +417,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607785592 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
+1607786791 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -430,7 +430,7 @@
 	"Word.h"
 	"HealthState.h"
 
-1607781650 c:\users\denis\documents\poo-project\poo-1\simulator.h
+1607797934 c:\users\denis\documents\poo-project\poo-1\simulator.h
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -439,7 +439,7 @@
 	<string>
 	"Country.h"
 
-1607781351 c:\users\denis\documents\poo-project\poo-1\word.h
+1607796106 c:\users\denis\documents\poo-project\poo-1\word.h
 	"SimulatorRules.h"
 	"Simulator.h"
 
@@ -453,7 +453,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607783259 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
+1607799088 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -464,7 +464,7 @@
 	<algorithm>
 	<cmath>
 
-1607785362 source:c:\users\denis\documents\poo-project\poo-1\simulatorrules.cpp
+1607797310 source:c:\users\denis\documents\poo-project\poo-1\simulatorrules.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -472,7 +472,7 @@
 	<string>
 	"SimulatorRules.h"
 
-1607783632 source:c:\users\denis\documents\poo-project\poo-1\word.cpp
+1607795947 source:c:\users\denis\documents\poo-project\poo-1\word.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>

@@ -18,7 +18,7 @@ using namespace std;
 int main()
 {
     srand((unsigned) time(0));
-    Word w(2,2,10,0.3);
+    Word w(2,2,1000,0.3);
     w.print_word_bycountries();
     w.print_word_all();
     int dias_totales = 10;
