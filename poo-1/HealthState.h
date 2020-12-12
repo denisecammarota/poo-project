@@ -14,7 +14,7 @@ class Human;
 class HealthState{
     public:
         //acciones
-        void passDay(Human * h);
+        virtual void passDay(Human * h);
         //preguntas de tipo de estado de salud
         virtual bool isHealthy();
         virtual bool isInfected();

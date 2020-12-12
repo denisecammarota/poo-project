@@ -62,7 +62,7 @@ Simulator::~Simulator(){}; //completar
 void Simulator::passDay(){ //hasta aca esta todo bien verdaderamente, vamos a chequear paso por paso por que no hay movimiento
     int npaises = list_countries.size();
     for(int i=0;i<npaises;i++){
-        list_countries[i]->runHealthActions();
+        list_countries[i]->runHealthActions(); //probamos esta parte primero
     }
     for(int i=0;i<npaises;i++){
         list_countries[i]->processMoves();

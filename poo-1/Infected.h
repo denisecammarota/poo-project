@@ -16,7 +16,7 @@ class Infected:public HealthState{
     public:
         bool isInfected() override;
         bool isInfectious() override;
-        void passDay(Human * h);
+        void passDay(Human * h) override;
 };
 
 

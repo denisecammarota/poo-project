@@ -93,6 +93,7 @@ Country * Human::selectDestination(){
     vector<Country*> filtered_candidates; //los candidatos filtrados
     moving_candidates = country->get_countryneighbours();
     int n_candidates = moving_candidates.size();
+    cout << "num candidatos: " << n_candidates << endl;
     //filtro primero los candidatos posibles
     for(int i=0;i<n_candidates;i++){
         if(moving_candidates[i]->hasVisiblyInfectious()){
@@ -101,6 +102,7 @@ Country * Human::selectDestination(){
     }
     //ahora elijo un pais para moverme
     n_candidates = filtered_candidates.size(); //actualizo por los filtrados ahora
+    cout << "filtered candidated: " << n_candidates << endl;
     Country * dest_country = nullptr; //en ppio es nullptr
     if(n_candidates != 0){
         int idx = rand()%(n_candidates);

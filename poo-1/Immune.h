@@ -15,7 +15,7 @@ class Immune:public HealthState{ //esta listo
     public:
         bool isImmune() override;
         bool isInfectious() override;
-        void passDay(Human * h);
+        void passDay(Human * h) override;
 };
 
 

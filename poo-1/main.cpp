@@ -18,11 +18,11 @@ using namespace std;
 int main()
 {
     srand((unsigned) time(0));
-    Word w(4,4,100,0.5);
+    Word w(2,2,10,0.5);
     w.print_word();
-    int dias_totales = 1;
+    int dias_totales = 100;
     for(int i = 0;i<dias_totales;i++){
         w.passDay();
+        w.print_word();
     }
-    w.print_word();
 }

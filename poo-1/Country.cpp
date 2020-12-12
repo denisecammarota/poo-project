@@ -56,6 +56,10 @@ void Country::UpdateHealthStats(){
     country_stats.set_healthyCount(get_healthypeople());
     country_stats.set_infectedCount(get_infectedpeople());
     country_stats.set_deadCount(get_deadpeople());
+    country_stats.set_immuneCount(get_immunepeople());
+    country_stats.set_sickCount(get_sickpeople());
+    country_stats.set_infectiousCount(get_infectiouspeople());
+    country_stats.set_visiblyInfectiousCount(get_visiblyinfectiouspeople());
 }
 
 int Country::get_healthypeople(){
