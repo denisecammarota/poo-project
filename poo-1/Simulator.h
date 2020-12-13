@@ -29,8 +29,7 @@ class Simulator{
         void northNeighbourAdd(Country * c, int index); //añadir vecino al north/norte
         void southNeighbourAdd(Country * c, int index); //añadir vecino al south/sur
         //metodos de impresión
-        void print_simulator_bycountries(); //imprimir estados de salud de todos los paises
-        void print_simulator_all(); //imprimir estado de salud de todo el mundo
+        friend ostream & operator << (ostream &out, const Simulator * sim);
 };
 
 

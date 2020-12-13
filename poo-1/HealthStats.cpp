@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -53,7 +54,8 @@ void HealthStats::add(HealthStats other){
     visiblyInfectious += other.visiblyInfectious;
 
 };
-//
-void HealthStats::print(){
-    cout << "healthy: " << healthy << " immune:" << immune << " dead: " << dead << " infected: " << infected << " sick: " << sick << endl;
-};
+
+ostream & operator << (ostream &out, const HealthStats hs){
+    out << "healthy: " << hs.healthy << " immune:" << hs.immune << " dead: " << hs.dead << " infected: " << hs.infected << " sick: " << hs.sick << endl;
+    return out;
+}

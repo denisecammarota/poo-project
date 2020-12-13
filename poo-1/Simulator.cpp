@@ -135,31 +135,29 @@ void Simulator::southNeighbourAdd(Country * c, int index){
 
 //metodos de impresion, estos son bastantes simples verdaderamente
 
-void Simulator::print_simulator_bycountries(){
-    int npaises = list_countries.size();
-    cout << string(100, '-') << endl;
-    cout << "Day " << days_passed << endl;
-    for(int i=0;i<npaises;i++){
-        cout << list_countries[i]->get_name() << ": ";
-        list_countries[i]->get_countrystats().print();
-    }
-}
 
-void Simulator::print_simulator_all(){
-    int npaises = list_countries.size();
+ostream & operator << (ostream &out, const Simulator  * sim){
+    int npaises = sim->list_countries.size();
+    out << string(100, '-') << endl;
+    out << "Day " << sim->days_passed << endl;
+    for(int i=0;i<npaises;i++){
+        out << sim->list_countries[i]->get_name() << ": ";
+        out << sim->list_countries[i]->get_countrystats();
+    }
+    //estadisticas totales del mundo
     int h = 0;
     int in = 0;
     int s = 0;
     int d = 0;
     int im = 0;
-    cout << "Word (sum): ";
+    out << "Word (sum): ";
     for(int i=0;i<npaises;i++){
-        h += list_countries[i]->get_countrystats().get_healthyCount();
-        in += list_countries[i]->get_countrystats().get_infectedCount();
-        d += list_countries[i]->get_countrystats().get_deadCount();
-        s += list_countries[i]->get_countrystats().get_sickCount();
-        im += list_countries[i]->get_countrystats().get_immuneCount();
+        h += sim->list_countries[i]->get_countrystats().get_healthyCount();
+        in += sim->list_countries[i]->get_countrystats().get_infectedCount();
+        d += sim->list_countries[i]->get_countrystats().get_deadCount();
+        s += sim->list_countries[i]->get_countrystats().get_sickCount();
+        im += sim->list_countries[i]->get_countrystats().get_immuneCount();
     }
-    cout << "healthy: " << h << " immune:" << im << " dead: " << d << " infected: " << in << " sick: " << s << endl;
+    out << "healthy: " << h << " immune:" << im << " dead: " << d << " infected: " << in << " sick: " << s << endl;
+    return out;
 }
-

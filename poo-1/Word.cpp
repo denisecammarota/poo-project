@@ -8,23 +8,35 @@
 #include "Simulator.h"
 #include "Word.h"
 
+using namespace std;
 //CLASE WORD/MUNDO
-Word::Word(int rows,int columns,int people,double perCent_infected){ //constructor
+
+
+World::World(int rows,int columns,int people,double perCent_infected){ //crea el mundo una vez recibidos los parametros
+    if(perCent_infected > 1){
+        throw PercentageNumberError();
+    }
+    if(rows < 1){
+        throw RowNumberError{};
+    }
+    if(columns < 1){
+        throw ColumnNumberError{};
+    }
     simulator = new Simulator(rows,columns);
     simulator->populate(people,perCent_infected);
 }
 
-Word::~Word(){delete simulator; simulator = nullptr;} //destructor
+World::~World(){delete simulator; simulator = nullptr;} //destructor
 
 
-void Word::passDay(){ //pasar dia en el mundo, llama al passDay de simulator
+void World::passDay(){ //pasar dia en el mundo, llama al passDay de simulator
     simulator->passDay();
 }
 
-void Word::print_word_bycountries(){ //imprimir paises, llama al metodo de simulator
-    simulator->print_simulator_bycountries();
+
+ostream & operator << (ostream &out, const World &w){
+    out << w.simulator;
+    return out;
 }
 
-void Word::print_word_all(){ //idem anterior, llama a un metodo de simulator
-    simulator->print_simulator_all();
-}
+

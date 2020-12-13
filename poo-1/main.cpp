@@ -17,14 +17,32 @@ using namespace std;
 //MAIN DEL PROGRAMA POR AHORA
 int main()
 {
+    //seed para los numeros random
     srand((unsigned) time(0));
-    Word w(2,2,1000,0.3);
-    w.print_word_bycountries();
-    w.print_word_all();
-    int dias_totales = 10;
-    for(int i = 0;i<dias_totales;i++){
-        w.passDay();
-        w.print_word_bycountries();
-        w.print_word_all();
+    //comienzo de la simulacion, parametros a ingresar que permito
+    int rows;
+    int columns;
+    int peop;
+    double perCent_infected;
+    int days_topass;
+    cout << "Beginning of the Simulation" << endl;
+    cout << "The Word is an rows x columns grid with a fixed number of people, a percentage of which is infected with a disease." << endl;
+    cout << "Please enter the following parameters: " << endl;
+    cout << "Rows (integer number): ";
+    cin >> rows;
+    cout << "Columns (integer number): ";
+    cin >> columns;
+    cout << "Number of people (integer number): ";
+    cin >> peop;
+    cout << "Percentage of infected people (number between 0 and 1): ";
+    cin >> perCent_infected;
+    cout << "Days to pass in the simulation (integer number): ";
+    cin >> days_topass;
+    //creo un objeto tipo mundo
+    World w(rows,columns,peop,perCent_infected);
+    cout << w; //imprimo el estado inicial
+    for(int i = 0;i<days_topass;i++){
+        w.passDay(); //paso un dia
+        cout << w; //imprimo el estado del mundo despues
     }
 }

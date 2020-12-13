@@ -271,14 +271,15 @@
 	"HealthStats.h"
 	<algorithm>
 
-1607360551 c:\users\denis\documents\poo-project\poo-1\healthstats.h
+1607873042 c:\users\denis\documents\poo-project\poo-1\healthstats.h
+	<algorithm>
 	<iostream>
 	<cstdlib>
 	<ctime>
 	<vector>
 	<string>
 
-1607784363 c:\users\denis\documents\poo-project\poo-1\healthstate.h
+1607799291 c:\users\denis\documents\poo-project\poo-1\healthstate.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -334,7 +335,8 @@
 	"Human.h"
 	"HealthState.h"
 
-1607625968 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
+1607873042 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
+	<algorithm>
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -417,7 +419,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607786791 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
+1607873433 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -430,7 +432,7 @@
 	"Word.h"
 	"HealthState.h"
 
-1607797934 c:\users\denis\documents\poo-project\poo-1\simulator.h
+1607874063 c:\users\denis\documents\poo-project\poo-1\simulator.h
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -439,7 +441,7 @@
 	<string>
 	"Country.h"
 
-1607796106 c:\users\denis\documents\poo-project\poo-1\word.h
+1607874063 c:\users\denis\documents\poo-project\poo-1\word.h
 	"SimulatorRules.h"
 	"Simulator.h"
 
@@ -453,7 +455,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607799088 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
+1607872920 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -472,7 +474,7 @@
 	<string>
 	"SimulatorRules.h"
 
-1607795947 source:c:\users\denis\documents\poo-project\poo-1\word.cpp
+1607874972 source:c:\users\denis\documents\poo-project\poo-1\word.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>

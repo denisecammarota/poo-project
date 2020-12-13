@@ -1,11 +1,14 @@
 #ifndef HEALTHSTATS_H_INCLUDED
 #define HEALTHSTATS_H_INCLUDED
 
+#include <algorithm>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include <vector>
 #include <string>
+
+using namespace std;
 
 class HealthStats{
     //estadisticas
@@ -40,7 +43,7 @@ class HealthStats{
         void set_visiblyInfectiousCount(int vic);
         //
         void add(HealthStats other);
-        void print();
+        friend ostream & operator << (ostream &out, const HealthStats hs);
 };
 
 #endif // HEALTHSTATS_H_INCLUDED
