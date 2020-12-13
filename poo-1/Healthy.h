@@ -10,9 +10,10 @@
 #include "Human.h"
 #include "HealthState.h"
 
-class Healthy: public HealthState{ //a completar
+//CLASE HEALHY/SANA HEREDADA DE HEATHSTATE/ESTADO DE SALUD
+class Healthy: public HealthState{
     public:
-        bool isHealthy() override;
+        bool isHealthy() override; //en este caso, esta funcion devuelve true
 };
 
 

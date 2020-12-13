@@ -10,7 +10,9 @@
 
 using namespace std;
 
+//CLASE COUNTRY/PAISES
 
+//constructor, le pasa nombre del pais como string
 Country::Country(string s){
     country_name = s;
     id_country = total_countries;
@@ -18,7 +20,7 @@ Country::Country(string s){
     UpdateHealthStats();
 };
 
-
+//destructor
 Country::~Country(){
     int n = country_people.size();
     for(int i=0;i<n;i++){
@@ -33,39 +35,41 @@ Country::~Country(){
 }
 
 
-int Country::get_id(){return id_country;}
-string Country::get_name(){return country_name;}
+int Country::get_id(){return id_country;}//devuelve el id de un pais
+string Country::get_name(){return country_name;} //devuelve el nombre de un pais
 
-//aniadir y remover personas
-void Country::addHuman(Human * h){country_people.push_back(h);};
-void Country::removeHuman(Human * h){
+//añadir y remover personas
+void Country::addHuman(Human * h){country_people.push_back(h);}; //añadir personas al pais
+void Country::removeHuman(Human * h){ //remover personas del pais
     country_people.erase(std::remove(country_people.begin(), country_people.end(), h), country_people.end());
-    }; //ref: https://stackoverflow.com/questions/3385229/c-erase-vector-element-by-value-rather-than-by-position
-//aniadir paises vecinos
+    }; //(ref: https://stackoverflow.com/questions/3385229/c-erase-vector-element-by-value-rather-than-by-position)
+
+//añadir paises vecinos
 void Country::addNeighbour(Country * c){
     country_neighbours.push_back(c);
 };
 
 //metodos llamados desde humans
-void Country::moveHuman(Human * h){country_arrivals.push_back(h);};
+void Country::moveHuman(Human * h){country_arrivals.push_back(h);}; //agregar personas llegadas a un pais
 
 bool Country::hasVisiblyInfectious(){
-    return country_stats.get_visiblyInfectiousCount() > 0;
+    return country_stats.get_visiblyInfectiousCount() > 0; //true si hay personas visibly infectious, false en caso contrario
 };
+
 bool Country::hasInfectious(){
-    return country_stats.get_infectiousCount() > 0;
+    return country_stats.get_infectiousCount() > 0; //true si hay personas infectious, false en caso contrario
 };
 
 vector <Country *> Country::get_countryneighbours(){
-    return country_neighbours;
+    return country_neighbours; //retorna paises vecinos
 };
 
 vector <Human *> Country::get_countryresidents(){
-    return country_people;
+    return country_people; //retorna personas residentes en un pais
 };
 
 //estadisticas sanitarias
-void Country::UpdateHealthStats(){
+void Country::UpdateHealthStats(){ //actualizacion de estadisticas de salud del pais
     country_stats.set_healthyCount(get_healthypeople());
     country_stats.set_infectedCount(get_infectedpeople());
     country_stats.set_deadCount(get_deadpeople());
@@ -75,7 +79,7 @@ void Country::UpdateHealthStats(){
     country_stats.set_visiblyInfectiousCount(get_visiblyinfectiouspeople());
 }
 
-int Country::get_healthypeople(){
+int Country::get_healthypeople(){ //retorna cantidad de personas sanas
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -86,7 +90,7 @@ int Country::get_healthypeople(){
     return res;
 }
 
-int Country::get_infectedpeople(){
+int Country::get_infectedpeople(){ //retorna cantidad de personas infectadas
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -98,7 +102,7 @@ int Country::get_infectedpeople(){
 }
 
 
-int Country::get_deadpeople(){
+int Country::get_deadpeople(){ //retorna cantidad de personas muertas
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -109,7 +113,7 @@ int Country::get_deadpeople(){
     return res;
 }
 
-int Country::get_sickpeople(){
+int Country::get_sickpeople(){ //retorna cantidad de personas enfermas
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -121,7 +125,7 @@ int Country::get_sickpeople(){
 }
 
 
-int Country::get_immunepeople(){
+int Country::get_immunepeople(){ //retorna cantidad de personas inmunes
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -132,7 +136,7 @@ int Country::get_immunepeople(){
     return res;
 }
 
-int Country::get_infectiouspeople(){
+int Country::get_infectiouspeople(){ //retorna cantidad de personas infectious
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -144,7 +148,7 @@ int Country::get_infectiouspeople(){
 }
 
 
-int Country::get_visiblyinfectiouspeople(){
+int Country::get_visiblyinfectiouspeople(){ //retorna cantidad de personas visibly infectious
     int n = country_people.size();
     int res = 0;
     for(int i=0;i<n;i++){
@@ -155,7 +159,7 @@ int Country::get_visiblyinfectiouspeople(){
     return res;
 }
 
-HealthStats Country::get_countrystats(){
+HealthStats Country::get_countrystats(){ //retorna estadisticas de salud
     return country_stats;
 }
 
@@ -182,7 +186,7 @@ void Country::runHealthActions(){
 
 }
 
-//aca aniadimos a las personas que llegaron al pais
+//aca añadimos a las personas que llegaron al pais
 void Country::processMoves(){
     int narrivedpeople = country_arrivals.size();
     for(int i=0;i<narrivedpeople;i++){

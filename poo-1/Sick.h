@@ -10,13 +10,14 @@
 #include "Human.h"
 #include "HealthState.h"
 
-class Sick:public HealthState{ //a completar
-    int days_sick = 0;
+//CLASE SICK/ENFERMA HEREDADA DE HEATHSTATE/ESTADO DE SALUD
+class Sick:public HealthState{ //atributos
+    int days_sick = 0; //contador de dias que una persona esta enferma
     public:
-        bool isSick() override;
-        bool isInfectious() override;
-        bool isVisiblyInfectious() override;
-        void passDay(Human * h) override;
+        bool isSick() override; //devuelve true en este caso
+        bool isInfectious() override; //develve true en este caso
+        bool isVisiblyInfectious() override; //idem, devuelve true
+        void passDay(Human * h) override; //pasar dias para una persona enferma
 };
 
 #endif // SICK_H_INCLUDED

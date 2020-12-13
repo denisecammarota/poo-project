@@ -11,12 +11,13 @@
 #include "Human.h"
 #include "HealthState.h"
 
+//CLASE INFECTED/INFECTADA HEREDADA DE HEATHSTATE/ESTADO DE SALUD
 class Infected:public HealthState{
     int days_infected = 0;
     public:
-        bool isInfected() override;
-        bool isInfectious() override;
-        void passDay(Human * h) override;
+        bool isInfected() override; //devuelve true en este caso
+        bool isInfectious() override; //devuelve true en este caso
+        void passDay(Human * h) override; //pasar dia para una persona infectada
 };
 
 

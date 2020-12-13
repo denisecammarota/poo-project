@@ -133,8 +133,7 @@ void Simulator::southNeighbourAdd(Country * c, int index){
     c->addNeighbour(list_countries[neighbour]);
 };
 
-//metodos de impresion, estos son bastantes simples verdaderamente
-
+//sobrecarga del operador << para imprimir
 
 ostream & operator << (ostream &out, const Simulator  * sim){
     int npaises = sim->list_countries.size();

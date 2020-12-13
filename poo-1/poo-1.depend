@@ -240,7 +240,7 @@
 	<vector>
 	<string>
 
-1607790995 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
+1607889316 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -251,7 +251,7 @@
 	"Country.h"
 	<algorithm>
 
-1607785915 c:\users\denis\documents\poo-project\poo-1\human.h
+1607894550 c:\users\denis\documents\poo-project\poo-1\human.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -261,7 +261,7 @@
 	"HealthState.h"
 	"Healthy.h"
 
-1607624853 c:\users\denis\documents\poo-project\poo-1\country.h
+1607894593 c:\users\denis\documents\poo-project\poo-1\country.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -271,7 +271,7 @@
 	"HealthStats.h"
 	<algorithm>
 
-1607873042 c:\users\denis\documents\poo-project\poo-1\healthstats.h
+1607889884 c:\users\denis\documents\poo-project\poo-1\healthstats.h
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -279,7 +279,7 @@
 	<vector>
 	<string>
 
-1607799291 c:\users\denis\documents\poo-project\poo-1\healthstate.h
+1607890597 c:\users\denis\documents\poo-project\poo-1\healthstate.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -295,7 +295,7 @@
 	<vector>
 	<string>
 
-1607618298 c:\users\denis\documents\poo-project\poo-1\healthy.h
+1607890775 c:\users\denis\documents\poo-project\poo-1\healthy.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -305,7 +305,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607355205 source:c:\users\denis\documents\poo-project\poo-1\dead.cpp
+1607893729 source:c:\users\denis\documents\poo-project\poo-1\dead.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -315,7 +315,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607618502 c:\users\denis\documents\poo-project\poo-1\dead.h
+1607893729 c:\users\denis\documents\poo-project\poo-1\dead.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -325,7 +325,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607628480 source:c:\users\denis\documents\poo-project\poo-1\healthstate.cpp
+1607890663 source:c:\users\denis\documents\poo-project\poo-1\healthstate.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -335,7 +335,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607873042 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
+1607889884 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -355,7 +355,7 @@
 	"Human.h"
 	"SimulatorRules.h"
 
-1607791622 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
+1607894375 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -369,7 +369,7 @@
 	"Immune.h"
 	"Dead.h"
 
-1607628381 c:\users\denis\documents\poo-project\poo-1\infected.h
+1607892908 c:\users\denis\documents\poo-project\poo-1\infected.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -379,7 +379,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607628381 c:\users\denis\documents\poo-project\poo-1\sick.h
+1607892891 c:\users\denis\documents\poo-project\poo-1\sick.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -389,7 +389,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607628381 c:\users\denis\documents\poo-project\poo-1\immune.h
+1607893513 c:\users\denis\documents\poo-project\poo-1\immune.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -399,7 +399,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607785701 source:c:\users\denis\documents\poo-project\poo-1\immune.cpp
+1607893155 source:c:\users\denis\documents\poo-project\poo-1\immune.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -409,7 +409,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607785661 source:c:\users\denis\documents\poo-project\poo-1\infected.cpp
+1607892788 source:c:\users\denis\documents\poo-project\poo-1\infected.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -419,7 +419,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607873433 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
+1607875616 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -445,7 +445,7 @@
 	"SimulatorRules.h"
 	"Simulator.h"
 
-1607785409 source:c:\users\denis\documents\poo-project\poo-1\sick.cpp
+1607892134 source:c:\users\denis\documents\poo-project\poo-1\sick.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -455,7 +455,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607872920 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
+1607885336 source:c:\users\denis\documents\poo-project\poo-1\simulator.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>

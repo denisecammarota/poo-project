@@ -9,5 +9,4 @@
 
 bool Dead::isDead(){return true;}
 bool Dead::isInfectious(){return true;}
-bool Dead::isVisiblyInfectious(){return true;}
 

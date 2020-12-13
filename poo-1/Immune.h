@@ -10,12 +10,14 @@
 #include "Human.h"
 #include "HealthState.h"
 
-class Immune:public HealthState{ //esta listo
-    int days_immune = 0;
+
+//CLASE IMMUNE/INMUNE HEREDADA DE HEATHSTATE/ESTADO DE SALUD
+class Immune:public HealthState{
+    int days_immune = 0; //dias que lleva siendo inmune
     public:
-        bool isImmune() override;
-        bool isInfectious() override;
-        void passDay(Human * h) override;
+        bool isImmune() override; //devuelve true en este caso
+        bool isInfectious() override; //devuelve true en este caso
+        void passDay(Human * h) override; //pasa un dia para una persona inmune
 };
 
 

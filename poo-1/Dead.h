@@ -11,11 +11,11 @@
 #include "Human.h"
 #include "HealthState.h"
 
+//CLASE DEAD/MUERTA HEREDADA DE HEATHSTATE/ESTADO DE SALUD
 class Dead: public HealthState{
     public:
-        bool isDead() override;
-        bool isInfectious() override;
-        bool isVisiblyInfectious() override;
+        bool isDead() override;  //en este caso devuelve true
+        bool isInfectious() override; //en este caso devuelve true
 };
 
 

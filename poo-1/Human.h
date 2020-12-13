@@ -11,45 +11,42 @@
 #include "HealthState.h"
 #include "Healthy.h"
 
-class Country;
-class HealthState;
-//CLASE HUMANOS
+class Country; //forward declaration de la clase country
+class HealthState; //forward declaration de la clase HealthState
+//CLASE HUMAN/HUMANOS
 class Human{
     private:
         //atributos de una persona
         static int total_humans; //cantidad de personas creadas
         int id_persona; //id de la persona
-        int days_until_move; //dias que faltan hasta movimiento
+        int days_until_move; //dias que faltan hasta ver si se muda a otro pais
         HealthState * health; //estado de salud
         Country * country; //pais donde esta la persona
     public:
-        Human(Country * c);
-        ~Human();
-        int get_id();
-        void Gen_MoveDays();
+        Human(Country * c); //constructor, asigna pais al que pertenece la persona
+        ~Human(); //destructor
+        int get_id(); //devuelve id de una persona determinada
+        void Gen_MoveDays(); //genera dias que le faltan hasta ver si se mueve a otro pais
         //
-        void Become_Healthy();
-        void Become_Infected();
-        void Become_Sick();
-        void Become_Dead();
-        void Become_Immune();
+        void Become_Healthy(); //hace que una persona este healthy/sana
+        void Become_Infected(); //hace que una persona este infected/infectada
+        void Become_Sick(); //hace que una persona este sick/enferma
+        void Become_Dead(); //hace que una persona este dead/muerta
+        void Become_Immune(); //hace que una persona este immune/inmune
         //
-        bool isHealthy();
-        bool isInfected();
-        bool isSick();
-        bool isImmune();
-        bool isDead();
+        bool isHealthy(); //devuelve true si una persona esta sana/healthy y false en caso constrario
+        bool isInfected(); //idem anterior pero con infected/infectado
+        bool isSick(); //idem anterior pero con sick/enfermo
+        bool isImmune(); //idem anterior pero con immune/inmune
+        bool isDead(); //idem anterior pero con dead/muerto
         //
-        bool isInfectious();
-        bool isVisiblyInfectious();
-        //imprimir (despues si tengo tiempo hago el overloading, por ahora no)
-        void print();
+        bool isInfectious(); //idem, pero para infectious (son de esta categoria sick,immune,dead e infected)
+        bool isVisiblyInfectious(); //idem, pero con visibly infectious (es de esta categoria sick)
         //moving y etc
-        Country * selectDestination();
-        void moving(Country * dest_country);
-        //pass day que creo que es el ultimo metodo que me quedaba
-        void passDay();
-        //get country
+        Country * selectDestination();  //elegir el pais de destino al que se muda una persona
+        void moving(Country * dest_country); //cambia el pais de una persona por el de destino en caso de que la persona se muda
+        void passDay(); //pasa un dia, resta dias a days_until_move y genera days_until_move de ser necesario
+        //devuelve el pais en el que esta una persona
         Country * get_country();
 };
 

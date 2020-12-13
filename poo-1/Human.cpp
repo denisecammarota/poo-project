@@ -11,7 +11,10 @@
 #include "Immune.h"
 #include "Dead.h"
 
+//CLASE HUMAN/HUMANOS
 
+
+        //constructor de un humano
         Human::Human(Country * c){
             id_persona = total_humans; //asigna id de la persona
             country = c; //asignar pais
@@ -21,7 +24,7 @@
             Gen_MoveDays(); //asigna dias hasta el proximo movimiento, completar
             total_humans++; //fin de creacion +1 persona
         }
-
+        //destructor
         Human::~Human(){
             delete health;
             health = nullptr;
@@ -29,34 +32,35 @@
 
         int Human::get_id(){return id_persona;} //devuelve id de persona
 
-        void Human::Gen_MoveDays(){ //genera cantidad de dias hasta moverse
-            int maximum = g_simpars.getMaxStayDays();
-            int minimum = g_simpars.getMinStayDays();
-            days_until_move = (rand()%(maximum-minimum+1))+minimum;
+        void Human::Gen_MoveDays(){ //genera cantidad de dias hasta moverse aleatoriamente en un rango
+            int maximum = g_simpars.getMaxStayDays(); //max dias de quedarse en un pais
+            int minimum = g_simpars.getMinStayDays(); //min dias de quedarse en un pais
+            days_until_move = (rand()%(maximum-minimum+1))+minimum; //generacion de la cantidad de dias
         }
 
         void Human::Become_Healthy(){ //asigna estado sano a una persona
             delete health;
             health = new Healthy;
         };
-        void Human::Become_Infected(){
+        void Human::Become_Infected(){ //asigna estado infectado a una persona
             delete health;
             health = new Infected;
         };
-        void Human::Become_Sick(){
+        void Human::Become_Sick(){ //asigna estado enfermo a una persona
             delete health;
             health = new Sick;
         };
-        void Human::Become_Dead(){
+        void Human::Become_Dead(){ //asigna estado muerto a una persona
             delete health;
             health = new Dead;
         };
-        void Human::Become_Immune(){
+        void Human::Become_Immune(){ //asigna estado inmune a una persona
             delete health;
             health = new Immune;
         };
 
         //preguntas sobre los estados de salud de las personas
+        //explicadas antes
         bool Human::isHealthy(){
             bool v = health->isHealthy();
             return v;
@@ -87,10 +91,7 @@ bool Human::isVisiblyInfectious(){
     return v;
 }
 
-void Human::print(){
-    cout << "Humano con id: " << id_persona << "\nPais: " << country->get_name() << endl;
-}
-
+//elegir pais de destino
 Country * Human::selectDestination(){
     vector<Country*> moving_candidates; //en ppio todos los candidatos
     vector<Country*> filtered_candidates; //los candidatos filtrados
@@ -112,28 +113,34 @@ Country * Human::selectDestination(){
     return dest_country;
 }
 
+//mover una persona de pais
 void Human::moving(Country * dest_country){
     dest_country->moveHuman(this);
-    country = dest_country; //destination country
-    if(country->hasVisiblyInfectious() && g_simpars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse)
-        Become_Infected(); //creo que asi sin el this-> funcionara bien, SINO REVISAR Y CAMBIAR
+    country = dest_country; //pais de destino lo asigno como pais nuevo de la persona (no modificamos nada aca a la altura del pais,
+                            //eso se hace en la clase country)
+    if(country->hasVisiblyInfectious() && g_simpars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse) con una probabilidad y si en un pais hay gente que contagia
+        if(isInfectious() == false){ //si la persona no es infectious (son de esta categoria sick,immune,dead e infected)
+        Become_Infected(); //enfermar a una persona
+        }
     }
 };
 
+//pasa un dia en la vida de una persona
 void Human::passDay(){
     health->passDay(this);
-    if(isDead()!=true){
+    if(isDead()!=true){ //si esta muerto no hago nada
         days_until_move--;
     }
-    if(days_until_move == 0){
-        Gen_MoveDays();
-        Country * dest_country = selectDestination();
+    if(days_until_move == 0){ //si se tiene que mover una persona
+        Gen_MoveDays(); //genero nuevos dias hasta que se tenga que mover
+        Country * dest_country = selectDestination(); //genero pais de destino
         if(dest_country != nullptr){
-            moving(dest_country);
+            moving(dest_country); //si hay algun pais para moverse, muevo a la persona ahi
         }
     }
 }
 
+//devuelve el pais en el que esta una persona
 Country * Human::get_country(){
     return country;
 }

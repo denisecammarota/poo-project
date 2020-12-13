@@ -19,7 +19,7 @@ int main()
 {
     //seed para los numeros random
     srand((unsigned) time(0));
-    //comienzo de la simulacion, parametros a ingresar que permito
+    //comienzo de la simulacion, parametros a ingresar que necesito
     int rows;
     int columns;
     int peop;
