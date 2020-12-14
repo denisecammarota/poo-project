@@ -15,7 +15,6 @@
 class Dead: public HealthState{
     public:
         bool isDead() override;  //en este caso devuelve true
-        bool isInfectious() override; //en este caso devuelve true
 };
 
 

@@ -118,8 +118,8 @@ void Human::moving(Country * dest_country){
     dest_country->moveHuman(this);
     country = dest_country; //pais de destino lo asigno como pais nuevo de la persona (no modificamos nada aca a la altura del pais,
                             //eso se hace en la clase country)
-    if(country->hasVisiblyInfectious() && g_simpars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse) con una probabilidad y si en un pais hay gente que contagia
-        if(isInfectious() == false){ //si la persona no es infectious (son de esta categoria sick,immune,dead e infected)
+    if(country->hasInfectious() && g_simpars.infectionDiceThrow()){ //si se infecta o no (pasa al moverse) con una probabilidad y si en un pais hay gente que contagia
+        if(isHealthy()){ //si la persona no es infectious (son de esta categoria sick,immune,dead e infected)
         Become_Infected(); //enfermar a una persona
         }
     }

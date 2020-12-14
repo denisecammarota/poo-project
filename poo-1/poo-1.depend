@@ -305,7 +305,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607893729 source:c:\users\denis\documents\poo-project\poo-1\dead.cpp
+1607956300 source:c:\users\denis\documents\poo-project\poo-1\dead.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -315,7 +315,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607893729 c:\users\denis\documents\poo-project\poo-1\dead.h
+1607956300 c:\users\denis\documents\poo-project\poo-1\dead.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -355,7 +355,7 @@
 	"Human.h"
 	"SimulatorRules.h"
 
-1607894375 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
+1607956287 source:c:\users\denis\documents\poo-project\poo-1\human.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -389,7 +389,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607893513 c:\users\denis\documents\poo-project\poo-1\immune.h
+1607956464 c:\users\denis\documents\poo-project\poo-1\immune.h
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -399,7 +399,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607893155 source:c:\users\denis\documents\poo-project\poo-1\immune.cpp
+1607956464 source:c:\users\denis\documents\poo-project\poo-1\immune.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>

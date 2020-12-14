@@ -8,5 +8,4 @@
 #include "Human.h"
 
 bool Dead::isDead(){return true;}
-bool Dead::isInfectious(){return true;}
 
