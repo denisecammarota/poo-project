@@ -53,17 +53,6 @@ void HealthStats::set_visiblyInfectiousCount(int vic){
     visiblyInfectious = vic;
 };
 
-//add/añadir healthstats
-void HealthStats::add(HealthStats other){
-    healthy += other.healthy;
-    infected += other.infected;
-    immune += other.immune;
-    dead += other.dead;
-    sick += other.sick;
-    infectious += other.infectious;
-    visiblyInfectious += other.visiblyInfectious;
-
-};
 
 //sobrecarga del operador <<
 ostream & operator << (ostream &out, const HealthStats hs){

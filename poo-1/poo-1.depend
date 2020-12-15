@@ -240,7 +240,7 @@
 	<vector>
 	<string>
 
-1607889316 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
+1608041792 source:c:\users\denis\documents\poo-project\poo-1\country.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -271,7 +271,7 @@
 	"HealthStats.h"
 	<algorithm>
 
-1607889884 c:\users\denis\documents\poo-project\poo-1\healthstats.h
+1608042898 c:\users\denis\documents\poo-project\poo-1\healthstats.h
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -335,7 +335,7 @@
 	"Human.h"
 	"HealthState.h"
 
-1607889884 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
+1608042898 source:c:\users\denis\documents\poo-project\poo-1\healthstats.cpp
 	<algorithm>
 	<iostream>
 	<cstdlib>
@@ -419,7 +419,7 @@
 	"SimulatorRules.h"
 	"Human.h"
 
-1607875616 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
+1608041792 source:c:\users\denis\documents\poo-project\poo-1\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>

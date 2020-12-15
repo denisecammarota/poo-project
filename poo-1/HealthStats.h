@@ -42,8 +42,6 @@ class HealthStats{
         // get y set de numero de personas visibly infectious
         int get_visiblyInfectiousCount();
         void set_visiblyInfectiousCount(int vic);
-        // metodos de añadir/actualizar
-        void add(HealthStats other);
         //sobrecarga del operador <<
         friend ostream & operator << (ostream &out, const HealthStats hs);
 };
